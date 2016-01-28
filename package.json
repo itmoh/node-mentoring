@@ -1,0 +1,20 @@
+{
+  "name": "node-mentoring",
+  "version": "1.0.0",
+  "description": "node mentoring program",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxim-tarasenko/node-mentoring.git"
+  },
+  "author": "m.tarasenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxim-tarasenko/node-mentoring/issues"
+  },
+  "homepage": "https://github.com/maxim-tarasenko/node-mentoring#readme"
+}
+  

@@ -1,0 +1,16 @@
+{
+  "name": "express_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "lodash": "^4.0.1",
+    "q": "^1.4.1"
+  }
+}
