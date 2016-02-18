@@ -1,0 +1,18 @@
+{
+  "name": "pipes",
+  "version": "0.0.0",
+  "description": "",
+  "main": "program.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concat-stream": "^1.5.1",
+    "request": "^2.69.0",
+    "split": "^1.0.0",
+    "through2": "^2.0.1"
+  },
+  "devDependencies": {}
+}

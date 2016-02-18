@@ -1,0 +1,9 @@
+node_modules
+.tmp
+.idea
+public
+client/bower_components
+cordova/platforms/*
+dist
+npm-debug.log
+cor
