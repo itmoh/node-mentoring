@@ -1,0 +1,15 @@
+{
+	"id": ".",
+	"exports": {},
+	"parent": null,
+	"filename": "D:\\Projects\\node-mentoring\\node_start\\node_1\\test.js",
+	"loaded": false,
+	"children": [],
+	"paths": [
+		"D:\\Projects\\node-mentoring\\node_start\\node_1\\node_modules",
+		"D:\\Projects\\node-mentoring\\node_start\\node_modules",
+		"D:\\Projects\\node-mentoring\\node_modules",
+		"D:\\Projects\\node_modules",
+		"D:\\node_modules"
+	]
+}
