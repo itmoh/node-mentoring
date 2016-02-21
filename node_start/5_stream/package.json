@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "concat-stream": "^1.5.1",
+    "dotenv": "^2.0.0",
     "request": "^2.69.0",
     "split": "^1.0.0",
     "through2": "^2.0.1"
