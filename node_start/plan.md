@@ -8,6 +8,7 @@
         Пакетный менеджер
     зачем он нужен, почему он используется, плюсы и минусы
         Распространение Javascript
+        http://www.modulecounts.com/
         raspbery, internet of things
         Переиспользование кода(немного)
         Одинаковый стиль на сервере и на клиенте
@@ -18,7 +19,6 @@
 
     use cases
         Soft realtime applications
-            chat
         Single page applications
         API
         Streaming data
@@ -26,29 +26,28 @@
 
     как он устроен
         http://la.by/blog/nodejs-osnovnye-ponyatiya-i-tehnologii-sozdaniya-veb-prilozheniy
-    адоны на с/с++
     как можно работать с нодом
     стандартные библиотеки
-
-
+    enviromement va
 
 2. Модули
     как подгрузить модуль
         require
+        /
         ./текушая директория
         ../ родительская директория
         '' - модули в node_modules
+        модули-директории, index.js
     типы модулей
         js
         node?
         json
-    2 вида загружаемых модулей
-    модули-директории, index.js
     как создать модуль
         module.exports
         exports
     структура module объекта
-    куширование модуля
+    кeширование модуля
+
 
 3. Экосистема
     npm - node package manager
@@ -66,18 +65,22 @@
     Async
     генераторы yield
 
+
 5. Работа с Stream
     работа с данными по кусочкам
     по умолчанию 65 кб?
     https://github.com/substack/stream-adventure
     имплементация pipe, илья с 50 минуты
+    http
+    fs
 
 
 6. Разработка и дебаг
     nodemon
     node-inspector (--debug-brk)
     Утечки памяти
+    запуск юнит тестов
 
 7. Примеры
-    асинхронность
+    Events
     запустить с последними рлюшкам esmascript (--harmony)

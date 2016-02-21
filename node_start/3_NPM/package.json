@@ -1,8 +1,8 @@
 {
-  "name": "node-mentoring",
+  "name": "3_npm_test",
   "version": "1.0.0",
-  "description": "node mentoring program",
-  "main": "index.js",
+  "description": "test package",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,14 +10,16 @@
     "type": "git",
     "url": "git+https://github.com/maxim-tarasenko/node-mentoring.git"
   },
-  "author": "m.tarasenko",
+  "keywords": [
+    "node",
+    "test",
+    "npm",
+    "package.json"
+  ],
+  "author": "maxim tarasenko",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/maxim-tarasenko/node-mentoring/issues"
   },
-  "homepage": "https://github.com/maxim-tarasenko/node-mentoring#readme",
-  "dependencies": {
-    "async": "^1.5.2",
-    "q": "^1.4.1"
-  }
+  "homepage": "https://github.com/maxim-tarasenko/node-mentoring#readme"
 }
