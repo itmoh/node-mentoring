@@ -33,21 +33,18 @@
 2. Модули
     как подгрузить модуль
         require
-        /
         ./текушая директория
-        ../ родительская директория
         '' - модули в node_modules
         модули-директории, index.js
     типы модулей
         js
-        node?
+        node
         json
     как создать модуль
         module.exports
         exports
     структура module объекта
     кeширование модуля
-
 
 3. Экосистема
     npm - node package manager
@@ -70,7 +67,7 @@
     работа с данными по кусочкам
     по умолчанию 65 кб?
     https://github.com/substack/stream-adventure
-    имплементация pipe, илья с 50 минуты
+    имплементация pipe
     http
     fs
 
@@ -82,5 +79,4 @@
     запуск юнит тестов
 
 7. Примеры
-    Events
     запустить с последними рлюшкам esmascript (--harmony)

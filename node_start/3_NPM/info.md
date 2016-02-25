@@ -7,6 +7,8 @@ main commands:
             --save
             --save-dev
             -g (npm install -g jshint)
+    npm adduser
+    npm publish
 
 package.json
     name: name of package
