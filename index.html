@@ -15,11 +15,33 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 	<link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+	<link rel="stylesheet" href="css/theme/white.css" id="theme">
 
 	<!-- Code syntax highlighting -->
 	<link rel="stylesheet" href="lib/css/zenburn.css">
 
+	<style>
+		.reveal section p.main-logo img {
+			border: none;
+			background: none;
+			box-shadow: none;
+		}
+
+		.reveal section p.main-logo {
+			top: -200px;
+			position: fixed;
+		}
+
+		h1.node-heared {
+			color: white;
+		}
+
+		small.highlight-blue {
+			background-color: #39C2D7;
+			color: white;
+			padding: 8px;
+		}
+	</style>
 	<!-- Printing and PDF exports -->
 	<script>
 		var link = document.createElement('link');
@@ -41,9 +63,10 @@
 		<!-- Any section element inside of this container is displayed as a slide -->
 		<div class="slides">
 			<section data-background="img/lake_view.jpg" style="text-align: left; color: white;">
-				<h1>Node.js</h1>
+				<p class='main-logo'><img src="img\EPAM_LOGO_White_type_RGB.png" /></p>
+				<h1 class="node-heared">Node.js</h1>
 				<p>
-					<small>Created by <a href="https://github.com/maxim-tarasenko">Maksym Tarasenko</a> / <a href="https://twitter.com/oblivionhammer">@oblivionhammer</a></small>
+					<small class="highlight-blue">Created by <a href="https://github.com/maxim-tarasenko">Maksym Tarasenko</a></small>
 				</p>
 			</section>
 
@@ -124,46 +147,44 @@
 					<h2>Modules</h2>
 					<ul>
 						<li>Prevents pollution of the global scope</li>
-						<li>Two Styles of module development</li>
-					</ul>
-				</section>
-				<section>
-					<h2>Modules Types</h2>
-					<ul>
-						<li>js</li>
-						<li>node</li>
-						<li>json</li>
+						<li>Module structure</li>
+						<li>module.exports</li>
+						<li>Caching</li>
 					</ul>
 				</section>
 			</section>
-
 			<section>
 				<section>
 					<h2>NPM</h2>
 					<ul>
 						<li>package.json</li>
+						<li>npm init</li>
 						<li>npm install</li>
 						<li>npm publish</li>
 					</ul>
 				</section>
 			</section>
 			<section>
-				<h2>Acync Code / Streams</h2>
-				<ul>
-					<li>Node-style</li>
-					<li>Promises (Q)</li>
-					<li>Async</li>
-					<li>Generators(ES6)</li>
-				</ul>
-			</section>
-			<section>
-				<h2>Streams</h2>
-				<ul>
-					<li>Readeble / Writeble stream</li>
-					<li><a href="https://github.com/substack/stream-adventure">stream-adventure</a></li>
-				</ul>
-			</section>
-			</section>
+				<section>
+					<h2>Streams</h2>
+					<ul>
+						<li>Events</li>
+						<li>Readeble / Writeble stream</li>
+						<li>Pipe</li>
+						<li>fs</li>
+						<li>http</li>
+						<li><a href="https://github.com/substack/stream-adventure">stream-adventure</a></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Acync Code</h2>
+					<ul>
+						<li>Node-style</li>
+						<li>Promises (Q)</li>
+						<li>Async</li>
+						<li>Generators(ES6)</li>
+					</ul>
+				</section>
 			</section>
 			<section>
 				<section>
@@ -171,7 +192,6 @@
 					<ul>
 						<li>nodemon</li>
 						<li>node-inspector</li>
-						<li>memory leak</li>
 					</ul>
 				</section>
 			</section>
