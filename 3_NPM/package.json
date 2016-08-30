@@ -4,11 +4,12 @@
   "description": "test package",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "runMain": "node main.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maxim-tarasenko/node-mentoring.git"
+    "url": "git+https://github.com/itmoh/node-mentoring.git"
   },
   "keywords": [
     "node",
@@ -19,7 +20,7 @@
   "author": "maxim tarasenko",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/maxim-tarasenko/node-mentoring/issues"
+    "url": "https://github.com/itmoh/node-mentoring/issues"
   },
-  "homepage": "https://github.com/maxim-tarasenko/node-mentoring#readme"
+  "homepage": "https://github.com/itmoh/node-mentoring#readme"
 }

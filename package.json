@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maxim-tarasenko/node-mentoring.git"
+    "url": "git+https://github.com/itmoh/node-mentoring.git"
   },
   "author": "m.tarasenko",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/maxim-tarasenko/node-mentoring/issues"
+    "url": "https://github.com/itmoh/node-mentoring/issues"
   },
-  "homepage": "https://github.com/maxim-tarasenko/node-mentoring#readme",
+  "homepage": "https://github.com/itmoh/node-mentoring#readme",
   "dependencies": {
     "async": "^1.5.2",
     "q": "^1.4.1"
