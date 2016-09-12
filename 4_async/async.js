@@ -4,22 +4,22 @@ var someModule = require('./some_module');
 //
 async.waterfall([
     function(callback) {
-        callback(null, 1, 2);
+        callback(null, { x: 1, y: 2 });
     },
     someModule.sum,
     function(result, callback) {
         console.log(result);
-        callback(null, result, 3);
+        callback(null, { x: result, y: 3 });
     },
     someModule.sum,
     function(result, callback) {
         console.log(result);
-        callback(null, result, -2);
+        callback(null, { x: result, y: -2 });
     },
     someModule.sum,
     function(result, callback) {
         console.log(result);
-        callback(null, result, 'test');
+        callback(null, { x: result, y: 'test' });
     },
     someModule.sum
 ], function (err, result) {

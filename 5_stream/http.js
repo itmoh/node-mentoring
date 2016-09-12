@@ -20,12 +20,6 @@ http.createServer(function(request, response) {
 
 console.log('node server running on port 3000');
 
-
-
-
-
-
-
 /*********HTTP server*****************/
 
 // var http = require('http');
