@@ -26,16 +26,16 @@
 			background: none;
 			box-shadow: none;
 		}
-
+		
 		.reveal section p.main-logo {
 			top: -200px;
 			position: fixed;
 		}
-
+		
 		h1.node-heared {
 			color: white;
 		}
-
+		
 		small.highlight-blue {
 			background-color: #39C2D7;
 			color: white;
@@ -119,29 +119,28 @@
 					</ul>
 				</section>
 			</section>
-			<!--
-			<section>
-				<section>
-					<h2>Event Loop</h2>
-					<img data-src="img\windows-node_js_02.jpg" alt="">
+			<SECTION>
+				<SECTION>
+					<H2>EVENT LOOP</H2>
+					<IMG DATA-SRC="IMG\WINDOWS-NODE_JS_02.JPG" ALT="">
+				</SECTION>
+				<SECTION>
+					<H2>EVENT LOOP</H2>
+					<IMG DATA-SRC="IMG\WINDOWS-NODE_JS_03.JPG" ALT="">
+				</SECTION>
+				<SECTION>
+					<H2>EVENT LOOP</H2>
+					<IMG DATA-SRC="IMG\WINDOWS-NODE_JS_04.JPG" ALT="">
+				</SECTION>
+				<SECTION>
+					<H2>EVENT LOOP</H2>
+					<IMG data-src="img\windows-node_js_05.jpg" alt="">
 				</section>
 				<section>
 					<h2>Event Loop</h2>
-					<img data-src="img\windows-node_js_03.jpg" alt="">
+					<img data-src="img\windows-node_js_06.jpg" alt="">
 				</section>
-				<section>
-					<h2>Event Loop</h2>
-					<img data-src="img\windows-node_js_04.jpg" alt="">
-				</section>
-				<section>
-					<h2>Event Loop</h2>
-					<img data-src="img\windows-node_js_05.jpg" alt="">
-				</section>
-				<section>
-					<h2>Event Loop</h2>
-					<img data-src="img\windows-node_js_02.jpg" alt="">
-				</section>
-			</section> -->
+			</section>
 			<section>
 				<section>
 					<h2>Modules</h2>
@@ -152,16 +151,163 @@
 						<li>Caching</li>
 					</ul>
 				</section>
+				<section data-markdown>
+					<h2>Modules: require</h2>
+					<code class="hljs" data-trim>
+						var module1 = require('module1');
+						var module1 = require('./node_modules/module1/index.js');
+						var module2 = require('./module2');
+						var module3 = require('../module3');
+					</code>
+				</section>
+				<section data-markdown>
+					<h2>Modules: </h2>
+					<code class="hljs" data-trim>
+						exports.log = function(msg) {
+							console.log(msg);
+						}
+
+						module.exports = function Loger() {
+							this.log = function(msg) {
+								console.log(msg);
+							}
+						};
+					</code>
+				</section>
 			</section>
 			<section>
 				<section>
-					<h2>NPM</h2>
+					<h2>NPM / Yarn</h2>
 					<ul>
 						<li>package.json</li>
 						<li>npm init</li>
 						<li>npm install</li>
 						<li>npm publish</li>
 					</ul>
+				</section>
+				<section>
+					<h2>package.json (1)</h2>
+					<pre><code class="json" >{
+	"name": "3_npm_test",
+	"version": "1.0.0",
+	"description": "test package",
+	"main": "main.js",
+	"scripts": {
+		"test": "echo \"Error: no test\" && exit 1",
+		"runMain": "node main.js"
+	}
+}</code></pre>
+				</section>
+				<section>
+					<h2>package.json (2)</h2>
+					<pre><code class="json" >{
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/itmoh/node-mentoring.git"
+	},
+	"keywords": [
+		"node"
+	],
+	"author": "maxim tarasenko",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/itmoh/node-mentoring/issues"
+	},
+	"homepage": "https://github.com/itmoh/node-mentoring#readme"
+}</code></pre>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Streams</h2>
+					<ul>
+						<li>Events</li>
+						<li>fs</li>
+						<li>http</li>
+						<li><a href="https://github.com/substack/stream-adventure">stream-adventure</a></li>
+					</ul>
+				</section>
+				<section data-markdown>
+					<h2>EventEmitter</h2>
+					<code class="hljs" data-trim>
+						var EventEmitter = require('events');
+						var emitter = new EventEmitter();
+						var listener = (arg) => {console.log(arg);};
+						emitter.on('test', listener);
+						setTimeout(function() {
+							emitter.emit('test', 'Hello world');
+							emitter.removeListener('test', listener);
+							emitter.emit('test', 'Hello world');
+						}, 1000);
+					</code>
+				</section>
+				<section data-markdown>
+					<h2>Readable Stream</h2>
+					<code class="hljs" data-trim>
+						var fs = require('fs');
+						var readableStream = fs.createReadStream('file.txt');
+						var data = '';
+						readableStream.on('data', function(chunk) {
+							data+=chunk;
+						});
+						readableStream.on('end', function() {
+							console.log(data);
+						});
+					</code>
+				</section>
+				<section data-markdown>
+					<h2>Writable Streams</h2>
+					<code class="hljs" data-trim>
+						var fs = require('fs');
+						var readableStream = fs.createReadStream('file1.txt');
+						var writableStream = fs.createWriteStream('file2.txt');
+						readableStream.on('data', function(chunk) {
+							writableStream.write(chunk);
+						});
+					</code>
+				</section>
+				<section data-markdown>
+					<h2>duplex, transform streams</h2>
+					<code class="hljs" data-trim>
+						a.pipe(b).pipe(a)
+						a.pipe(b).pipe(c)
+					</code>
+				</section>
+				<section data-markdown>
+					<h2>Pipe</h2>
+					<code class="hljs" data-trim>
+						var writableModuleStream = fs.createWriteStream('module.txt');
+						var stream = fs.createReadStream('data.csv');
+						stream.on('readable', onFileRead);
+						stream.on('end', function() {
+							writableModuleStream.end();
+						});
+
+						function onFileRead() {
+							var data = stream.read();
+							if (data && !writableModuleStream.write(data)) {
+								stream.removeListener('readable', onFileRead);
+								writableModuleStream.once('drain', function() {
+									stream.on('readable', onFileRead);
+									onFileRead();
+								});
+							}
+						}
+					</code>
+				</section>
+				<section data-markdown>
+					<h2>fs + http</h2>
+					<code class="hljs" data-trim>
+						var http = require('http'),
+						fs = require('fs');
+						http.createServer(function(request, response) {
+							if (req.method === 'POST') {
+								fs.readFile('./data.csv', 'utf-8', function(err, data) {
+									response.end(data);
+								});
+							} else res.end('send me a POST\n');
+						}).listen(3000);
+					</code>
 				</section>
 			</section>
 			<section>
@@ -174,24 +320,77 @@
 						<li>Generators(ES6)</li>
 					</ul>
 				</section>
-				<section>
-					<h2>Streams</h2>
-					<ul>
-						<li>Events</li>
-						<li>Readeble / Writeble stream</li>
-						<li>Pipe</li>
-						<li>fs</li>
-						<li>http</li>
-						<li><a href="https://github.com/substack/stream-adventure">stream-adventure</a></li>
-					</ul>
+				<section data-markdown>
+					<h2>Node-style</h2>
+					<code class="hljs" data-trim>
+						var someModule = require('./some_module');
+						someModule.sum({ x: 1, y: 2 }, function(err, result) {
+							if (err) {
+								console.log(err);
+								return;
+							}
+							console.log(result);
+						});
+					</code>
+				</section>
+				<section data-markdown>
+					<h2>Promises (Q)</h2>
+					<code class="hljs" data-trim>
+						var someModule = require('./some_module');
+						var qSum = Q.denodeify(someModule.sum);
+						Q({ x: 1, y: 2 })
+							.then(qSum)
+							.then(function(result) {
+								console.log(result);
+							})
+							.catch(function(error) {
+								console.log(error);
+							});
+					</code>
+				</section>
+				<section data-markdown>
+					<h2>Async</h2>
+					<code class="hljs" data-trim>
+						var async = require('async');
+						var someModule = require('./some_module');
+						async.waterfall([
+							function(callback) {
+								callback(null, { x: 1, y: 2 });
+							},
+							someModule.sum,
+							function(result, callback) {
+								console.log(result);
+							},
+						], function (err, result) {
+							console.log(err);
+						});
+					</code>
+				</section>
+				<section data-markdown>
+					<h2>Generators(ES6)</h2>
+					<code class="hljs" data-trim>
+						var Q = require('Q');
+						var co = require('co');
+						var someModule = require('./some_module');
+						var qSum = Q.denodeify(someModule.sum);
+						function* test() {
+							try {
+								var result = yield qSum({x: 1, y: 2});
+								console.log(result);
+							} catch(err) {
+								console.log(err);
+							}
+						};
+						co(test);
+					</code>
 				</section>
 			</section>
 			<section>
 				<section>
 					<h2>Development & Debug</h2>
 					<ul>
-						<li>nodemon</li>
-						<li>node-inspector</li>
+						<li>nodemoni, pm2</li>
+						<li>node-inspector, --inspect-brk</li>
 					</ul>
 				</section>
 			</section>
@@ -221,23 +420,23 @@
 			// Optional reveal.js plugins
 			dependencies: [{
 				src: 'lib/js/classList.js',
-				condition: function() {
+				condition: function () {
 					return !document.body.classList;
 				}
 			}, {
 				src: 'plugin/markdown/marked.js',
-				condition: function() {
+				condition: function () {
 					return !!document.querySelector('[data-markdown]');
 				}
 			}, {
 				src: 'plugin/markdown/markdown.js',
-				condition: function() {
+				condition: function () {
 					return !!document.querySelector('[data-markdown]');
 				}
 			}, {
 				src: 'plugin/highlight/highlight.js',
 				async: true,
-				callback: function() {
+				callback: function () {
 					hljs.initHighlightingOnLoad();
 				}
 			}, {
